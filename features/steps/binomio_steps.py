@@ -18,6 +18,5 @@ def step_when_binomio(context):
 
 @then("el resultado del binomio debe ser {esperado}")
 def step_then_resultado(context, esperado):
-    # Como en algunos casos esperado puede ser 'None' en texto, lo convertimos a None real
     esperado_val = None if esperado == "None" else float(esperado)
     assert context.resultado == esperado_val
